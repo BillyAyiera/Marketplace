@@ -16,6 +16,6 @@ public class TradeActivity extends AppCompatActivity {
         mLocationTextView = (TextView) findViewById(R.id.locationTextView);
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        mLocationTextView.setText("People Willing To Trade In: " + location);
+        mLocationTextView.setText("People Trading In: " + location);
     }
 }
