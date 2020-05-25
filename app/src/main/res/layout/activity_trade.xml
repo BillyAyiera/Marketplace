@@ -15,7 +15,8 @@
         android:text="People Trading"
         app:layout_constraintEnd_toEndOf="@+id/listView"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
 
     <ListView
         android:id="@+id/listView"
