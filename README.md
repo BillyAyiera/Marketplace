@@ -4,7 +4,7 @@
 
 # Get started
 
-* The instructions below will help you in project setup and testing in your local machine
+* The instructions below will help you in project setup and testing in your local machine.
 
 # Prerequisites
 
