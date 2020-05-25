@@ -11,9 +11,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//import butterknife.Bind;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class TradeActivity extends AppCompatActivity {
-    private TextView mLocationTextView;
-    private ListView mListView;
+    @BindView(R.id.locationTextView) TextView mLocationTextView;
+    @BindView(R.id.listView) ListView mListView;
+
     private String[] trade = new String[] {"Electronic Shop", "Jumia",
             "Kilimall", "Phone Shop", "Luca", "Basil",
             "Billy", "Cake Shop", "Naivas", "Phone Repair",
@@ -21,8 +26,9 @@ public class TradeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trade);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_trade);
+            ButterKnife.bind(this);
 
         mListView = (ListView) findViewById(R.id.listView);
         mLocationTextView = (TextView) findViewById(R.id.locationTextView);
