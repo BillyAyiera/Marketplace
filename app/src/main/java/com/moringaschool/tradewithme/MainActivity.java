@@ -15,7 +15,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @BindView(R.id.tradeButton) Button mTradeButton;
     @BindView(R.id.locationEditText) EditText mLocationEditText;
     @BindView(R.id.appNameTextView) TextView mAppNameTextView;
@@ -29,14 +29,17 @@ public class MainActivity extends AppCompatActivity {
 //        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
 //        mTradeButton = (Button)findViewById(R.id.tradeButton);
 
-        mTradeButton.setOnClickListener(new View.OnClickListener() {
+          mTradeButton.setOnClickListener(this);
+        }
+
             @Override
             public void onClick(View v) {
-                String location = mLocationEditText.getText().toString();
-                Intent intent = new Intent(MainActivity.this, TradeActivity.class);
-                intent.putExtra("location", location);
-                startActivity(intent);
+                if(v == mTradeButton) {
+                    String location = mLocationEditText.getText().toString();
+                    Intent intent = new Intent(MainActivity.this, TradeActivity.class);
+                    intent.putExtra("location", location);
+                    startActivity(intent);
+                }
             }
-        });
-    }
 }
+
