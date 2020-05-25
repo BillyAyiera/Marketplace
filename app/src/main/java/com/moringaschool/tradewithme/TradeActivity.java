@@ -46,8 +46,8 @@ public class TradeActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String restaurant = ((TextView)view).getText().toString();
-                Toast.makeText(TradeActivity.this, restaurant, Toast.LENGTH_LONG).show();
+                String trade = ((TextView)view).getText().toString();
+                Toast.makeText(TradeActivity.this, trade, Toast.LENGTH_LONG).show();
             }
         });
 
