@@ -22,10 +22,10 @@ public class TradeActivity extends AppCompatActivity {
     private String[] trade = new String[] {"Electronic Shop", "Jumia",
             "Kilimall", "Phone Shop", "Luca", "Basil",
             "Billy", "Cake Shop", "Naivas", "Phone Booth",
-            "Kevin"};
+            "Kevin", "Antonio", "Mama Mboga 1", "Mama Mboga 2", "Mama Mboga 3" };
     private String[] goods = new String[] {"Electronics", "Household items", "Household items",
             "Phones", "Furniture", "Clothes", "Vehicles", "Cakes", "Household items",
-            "Phones", "Onions Tomatoes" };
+            "Phones", "Onions Tomatoes", "Web Services", "Vegetables", "Kales", "Fruits" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
