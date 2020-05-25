@@ -26,7 +26,7 @@ The instructions below will help you in project setup and testing in your local 
 
 > 3. Select about phone
 
-> 4. Click on the build number seven times to activate developer options(Developer option will be activated)
+> 4. Click on the build number five times to activate developer options(Developer option will be activated)
 
 > 5. Select on developer option and select usb debugging
 
