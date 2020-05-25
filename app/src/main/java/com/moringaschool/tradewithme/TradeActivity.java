@@ -21,8 +21,11 @@ public class TradeActivity extends AppCompatActivity {
 
     private String[] trade = new String[] {"Electronic Shop", "Jumia",
             "Kilimall", "Phone Shop", "Luca", "Basil",
-            "Billy", "Cake Shop", "Naivas", "Phone Repair",
+            "Billy", "Cake Shop", "Naivas", "Phone Booth",
             "Kevin"};
+    private String[] goods = new String[] {"Electronics", "Household items", "Household items",
+            "Phones", "Furniture", "Clothes", "Vehicles", "Cakes", "Household items",
+            "Phones", "Onions Tomatoes" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +36,12 @@ public class TradeActivity extends AppCompatActivity {
         mListView = (ListView) findViewById(R.id.listView);
         mLocationTextView = (TextView) findViewById(R.id.locationTextView);
 
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, trade);
+//        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, trade);
+//        mListView.setAdapter(adapter);
+
+        MyTradeArrayAdapter adapter = new MyTradeArrayAdapter(this, android.R.layout.simple_list_item_1, trade, goods);
         mListView.setAdapter(adapter);
+
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
