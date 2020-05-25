@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="People Trading"
+        android:text="People Trading In"
         app:layout_constraintEnd_toEndOf="@+id/listView"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="0dp"
