@@ -46,7 +46,7 @@ The instructions below will help you in project setup and testing in your local 
 # CopyRight & License
 
 MIT License
-Copyright (c) [2020] [Billy Ayiera]
+Copyright (c) [2020]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
