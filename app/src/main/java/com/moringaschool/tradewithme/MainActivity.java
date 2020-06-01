@@ -1,24 +1,20 @@
 package com.moringaschool.tradewithme;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.view.MenuItem;
 
-//import butterknife.Bind;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @BindView(R.id.tradeButton) Button mTradeButton;
-    @BindView(R.id.locationEditText) EditText mLocationEditText;
-    @BindView(R.id.appNameTextView) TextView mAppNameTextView;
+public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.bottom_navbar) BottomNavigationView mBottomNav;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +22,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-//        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-//        mTradeButton = (Button)findViewById(R.id.tradeButton);
+        mBottomNav.setOnNavigationItemSelectedListener(navListener);
 
-          mTradeButton.setOnClickListener(this);
-        }
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+    }
 
-            @Override
-            public void onClick(View v) {
-                if(v == mTradeButton) {
-                    String location = mLocationEditText.getText().toString();
-                    Intent intent = new Intent(MainActivity.this, TradeActivity.class);
-                    intent.putExtra("location", location);
-                    startActivity(intent);
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Fragment selectedFragment = null;
+                    switch (menuItem.getItemId()){
+                        case R.id.home:
+                            selectedFragment = new HomeFragment();
+                            break;
+                        case R.id.sell:
+                            selectedFragment = new SellFragment();
+                            break;
+                        case R.id.cart:
+                            selectedFragment = new CartFragment();
+                            break;
+                        case R.id.account:
+                            selectedFragment = new AccountFragment();
+                            break;
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+
+                    return true;
                 }
-            }
-}
+            };
 
+}
