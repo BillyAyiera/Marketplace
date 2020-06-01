@@ -32,7 +32,6 @@ public class AccountFragment extends Fragment {
         accountName.setText(String.valueOf(bundle.getString("username")));
         accountName1.setText(String.valueOf(bundle.getString("username")));
         accountEmail.setText(String.valueOf(bundle.getString("username"))+"@gmail.com");
-        // Inflate the layout for this fragment
         return view;
     }
 }
