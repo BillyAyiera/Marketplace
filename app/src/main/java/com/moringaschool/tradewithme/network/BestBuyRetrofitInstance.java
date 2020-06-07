@@ -1,4 +1,6 @@
-package com.moringaschool.tradewithme;
+package com.moringaschool.tradewithme.network;
+
+import com.moringaschool.tradewithme.Constants;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

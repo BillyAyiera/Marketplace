@@ -1,13 +1,14 @@
-package com.moringaschool.tradewithme;
+package com.moringaschool.tradewithme.ui;
+
+import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.moringaschool.tradewithme.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         mBottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SignInFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -37,16 +38,17 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new HomeFragment();
                             break;
                         case R.id.sell:
-                            selectedFragment = new SellFragment();
+                            selectedFragment = new ProductsFragment();
                             break;
-                        case R.id.cart:
-                            selectedFragment = new CartFragment();
+                        case R.id.favorites:
+                            selectedFragment = new FavoritesFragment();
                             break;
                         case R.id.account:
                             selectedFragment = new AccountFragment();
                             break;
                     }
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+                    assert selectedFragment != null;
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).addToBackStack(null).commit();
 
                     return true;
                 }

@@ -1,15 +1,27 @@
-package com.moringaschool.tradewithme;
+package com.moringaschool.tradewithme.ui;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.SearchView;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import com.moringaschool.tradewithme.R;
+import com.moringaschool.tradewithme.adapters.RecyclerViewAdapter;
+import com.moringaschool.tradewithme.model.Product;
+import com.moringaschool.tradewithme.network.BestBuyApi;
+import com.moringaschool.tradewithme.network.BestBuyProductSearchResponse;
+import com.moringaschool.tradewithme.network.BestBuyRetrofitInstance;
 
 import java.util.List;
 
@@ -19,7 +31,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SellFragment extends Fragment {
+public class ProductsFragment extends Fragment implements SearchView.OnQueryTextListener {
     private static final String TAG = "SellFragment";
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
     @BindView(R.id.errorTextView) TextView mErrorTextView;
@@ -28,7 +40,8 @@ public class SellFragment extends Fragment {
     List<Product> productList;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         super.onCreate(savedInstanceState);
     }
 
@@ -36,7 +49,7 @@ public class SellFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_sell, container, false);
+        View view = inflater.inflate(R.layout.fragment_products, container, false);
         ButterKnife.bind(this,view);
 
         BestBuyApi client  = BestBuyRetrofitInstance.getProducts();
@@ -50,7 +63,7 @@ public class SellFragment extends Fragment {
                 if(response.isSuccessful()) {
                     productList = response.body().getProducts();
                     RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(),productList);
-                    recyclerView.setAdapter(recyclerViewAdapter  );
+                    recyclerView.setAdapter(recyclerViewAdapter);
                     layoutManager = new GridLayoutManager(getContext(),2);
                     recyclerView.setLayoutManager(layoutManager);
                     showProducts();
@@ -68,8 +81,17 @@ public class SellFragment extends Fragment {
         return view;
     }
 
-    private void showProducts() {
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.menu_search, menu);
 
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView.setOnQueryTextListener(this);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    private void showProducts() {
         recyclerView.setVisibility(View.VISIBLE);
     }
 
@@ -82,5 +104,16 @@ public class SellFragment extends Fragment {
         mErrorTextView.setText("Something went wrong. Please try again later");
         mErrorTextView.setVisibility(View.VISIBLE);
     }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        return false;
+    }
+
 
 }

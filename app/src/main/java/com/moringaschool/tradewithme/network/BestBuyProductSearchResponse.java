@@ -1,9 +1,11 @@
 
-package com.moringaschool.tradewithme;
+package com.moringaschool.tradewithme.network;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.moringaschool.tradewithme.model.Product;
+
+import java.util.List;
 
 public class BestBuyProductSearchResponse {
 
@@ -40,13 +42,13 @@ public class BestBuyProductSearchResponse {
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public BestBuyProductSearchResponse() {
     }
 
     /**
-     * 
+     *
      * @param total
      * @param canonicalUrl
      * @param totalTime
