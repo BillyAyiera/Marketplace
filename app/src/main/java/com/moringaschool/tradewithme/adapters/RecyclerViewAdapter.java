@@ -94,7 +94,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView textName;
         TextView textPrice;
         ImageView favoriteView;
-//        RelativeLayout parentLayout;
 
         public    ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -102,14 +101,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textName = itemView.findViewById(R.id.textName);
             textPrice = itemView.findViewById(R.id.textPrice);
             favoriteView = itemView.findViewById(R.id.select_favorite_item);
-//            parentLayout = itemView.findViewById(R.id.parentLayout);
         }
     }
-
-//    public void searchList(List<Product> newList) {
-//        productList = new ArrayList<>();
-//        productList.addAll(newList);
-//        notifyDataSetChanged();
-//    }
 
 }
