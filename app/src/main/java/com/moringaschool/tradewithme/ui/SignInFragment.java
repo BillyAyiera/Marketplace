@@ -38,7 +38,6 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
     private FirebaseAuth mAuth;
 
     public SignInFragment() {
-        // Required empty public constructor
     }
 
 
@@ -57,7 +56,6 @@ public class SignInFragment extends Fragment implements View.OnClickListener {
             goToHomeFragment();
         }
 
-        // Inflate the layout for this fragment
         return view;
     }
 

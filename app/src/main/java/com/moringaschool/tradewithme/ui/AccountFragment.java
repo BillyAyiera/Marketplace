@@ -49,7 +49,6 @@ public class AccountFragment extends Fragment {
     private String userId;
 
     public AccountFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -93,7 +92,6 @@ public class AccountFragment extends Fragment {
 
             }
         });
-        // Inflate the layout for this fragment
         return view;
     }
 

@@ -47,7 +47,6 @@ public class FavoritesFragment extends Fragment implements OnStartDragListener {
     List<Product> favoriteItems;
 
     public FavoritesFragment() {
-        // Required empty public constructor
     }
 
 

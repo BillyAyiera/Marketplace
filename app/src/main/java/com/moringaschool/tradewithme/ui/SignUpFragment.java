@@ -54,7 +54,6 @@ public class SignUpFragment extends Fragment implements View.OnClickListener {
     private FirebaseAuth.AuthStateListener authStateListener;
 
     public SignUpFragment() {
-        // Required empty public constructor
     }
 
     @Override
@@ -71,10 +70,6 @@ public class SignUpFragment extends Fragment implements View.OnClickListener {
         signInText.setOnClickListener(this);
         signUpButton.setOnClickListener(this);
 
-//        if(mAuth.getCurrentUser() != null){
-//            goToHomeFragment();
-//        }
-        // Inflate the layout for this fragment
         return view;
     }
 
