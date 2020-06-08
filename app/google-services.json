@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "449969017964",
+    "firebase_url": "https://tradewithme-1eaee.firebaseio.com",
+    "project_id": "tradewithme-1eaee",
+    "storage_bucket": "tradewithme-1eaee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449969017964:android:d2eef99ce7a3aa5318b449",
+        "android_client_info": {
+          "package_name": "com.moringaschool.tradewithme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449969017964-qo8pn71au8frtjnbatoi0sl1bvj50728.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx_W0gMxmQOh1yI9JjVYJp6mYDJxMRTKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449969017964-qo8pn71au8frtjnbatoi0sl1bvj50728.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
