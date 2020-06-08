@@ -2,10 +2,6 @@
 
 * TradeWithMe is an app that is built with intentions of helping people easily trade online.
 
-# Get started
-
-* The instructions below will help you in project setup and testing in your local machine.
-
 # Prerequisites
 
 > Android Studio Download [here](https://developer.android.com/studio/install)
@@ -17,6 +13,8 @@
 * Clone the app using the link below in the terminal after you are done downloading and installing android studio and java listed above.
 
 * Open android studio and open the cloned file.
+
+# Get started
 
 * Sign in/Sign up
 
