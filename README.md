@@ -1,7 +1,7 @@
 # TradeWithMe
 
 * TradeWithMe is an app that is built with the sole purpose of helping people easily trade online fast and secure.
-* With features like favorites, you can add a list of what you're interested in to purchase later after a sign up.
+* With features like favorites, you can now add a list of what you're interested in to purchase later only after creating an account.
 
 
 # Prerequisites
