@@ -14,12 +14,6 @@
 
 * Open android studio and open the cloned file.
 
-# Get started
-
-* Sign in/Sign up
-
-<img src="img/Screenshot_20200608-084444030.jpg" width="200">
-
 #### Setting the phone
 
 > 1. Connect your phone to data cable
@@ -33,6 +27,12 @@
 > 5. Select on developer option and select usb debugging
 
 > 6. Install TradeWithMe app from your android studio.
+
+# Get started
+
+* Sign in/Sign up
+
+<img src="img/Screenshot_20200608-084444030.jpg" width="200">
 
 # Technologies used
 
