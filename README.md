@@ -30,9 +30,9 @@
 
 # Get started
 
-<img src="img/Screenshot_20200608-084444030.jpg" width="200"> || <img src="img/Screenshot_20200608-113839893.jpg" width="200"> || <img src="img/Screenshot_20200608-084551491.jpg" width="200">
-
-
+<img src="img/Screenshot_20200608-084444030.jpg" width="200"> <img src="img/Screenshot_20200608-113839893.jpg" width="200"> <img src="img/Screenshot_20200608-084551491.jpg" width="200">
+<br>
+<img src="img/Screenshot_20200608-084619391.jpg" width="200"> <img src="img/Screenshot_20200608-084637845~2.jpg" width="200"> <img src="img/Screenshot_20200608-084646151~2.jpg" width="200">
 
 # Technologies used
 
