@@ -32,7 +32,7 @@
 
 * Sign in/Sign up
 
-<img src="img/Screenshot_20200608-084444030.jpg" width="200">
+<img src="img/Screenshot_20200608-084444030.jpg" width="200"> || <img src="img/Screenshot_20200608-084444030.jpg" width="200">
 
 # Technologies used
 
